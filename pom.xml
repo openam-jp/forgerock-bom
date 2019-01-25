@@ -25,7 +25,7 @@
   <description>Common BOM for ForgeRock projects.
     Provides a list of shared and third party dependencies
     which are known to be compatible with each other.</description>
-  <url>http://www.forgerock.com</url>
+  <url>https://github.com/openam-jp/forgerock-bom</url>
 
   <licenses>
     <license>
@@ -37,63 +37,18 @@
   </licenses>
 
   <issueManagement>
-    <system>jira</system>
-    <url>https://bugster.forgerock.org</url>
+    <system>GitHub</system>
+    <url>https://github.com/openam-jp/forgerock-bom/issues</url>
   </issueManagement>
 
   <scm>
-    <connection>scm:git:ssh://git@stash.forgerock.org:7999/commons/forgerock-bom.git</connection>
-    <developerConnection>scm:git:ssh://git@stash.forgerock.org:7999/commons/forgerock-bom.git</developerConnection>
-    <url>http://stash.forgerock.org/projects/COMMONS/repos/forgerock-bom/browse</url>
+    <connection>scm:git:https://github.com/openam-jp/forgerock-bom.git</connection>
+    <developerConnection>scm:git:git@github.com:openam-jp/forgerock-bom.git</developerConnection>
+    <url>https://github.com/openam-jp/forgerock-bom</url>
   </scm>
-
-  <distributionManagement>
-    <snapshotRepository>
-      <id>forgerock-snapshots</id>
-      <name>ForgeRock Snapshot Repository</name>
-      <url>${forgerockDistMgmtSnapshotsUrl}</url>
-    </snapshotRepository>
-
-    <repository>
-      <id>forgerock-staging</id>
-      <name>ForgeRock Release Repository</name>
-      <url>${forgerockDistMgmtReleasesUrl}</url>
-    </repository>
-  </distributionManagement>
-
-  <!-- (see FAQ at http://maven.apache.org/guides/mini/guide-central-repository-upload.html ) -->
-  <repositories>
-    <repository>
-      <id>forgerock-staging-repository</id>
-      <name>ForgeRock Release Repository</name>
-      <url>${forgerockDistMgmtReleasesUrl}</url>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-    </repository>
-
-    <repository>
-      <id>forgerock-snapshots-repository</id>
-      <name>ForgeRock Snapshot Repository</name>
-      <url>${forgerockDistMgmtSnapshotsUrl}</url>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-      <releases>
-        <enabled>false</enabled>
-      </releases>
-    </repository>
-  </repositories>
 
   <properties>
     <maven.min.version>3.0.1</maven.min.version>
-
-    <!-- Repository Deployment URLs -->
-    <forgerockDistMgmtSnapshotsUrl>http://maven.forgerock.org/repo/snapshots</forgerockDistMgmtSnapshotsUrl>
-    <forgerockDistMgmtReleasesUrl>http://maven.forgerock.org/repo/releases</forgerockDistMgmtReleasesUrl>
 
     <!-- Third party components versions -->
     <assertj.version>2.1.0</assertj.version>
