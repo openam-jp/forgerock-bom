@@ -486,6 +486,18 @@
         <version>${forgerock-commons.version}</version>
       </dependency>
 
+      <dependency>
+        <groupId>jp.openam.commons</groupId>
+        <artifactId>forgerock-audit-handler-elasticsearch</artifactId>
+        <version>${forgerock-commons.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>jp.openam.commons</groupId>
+        <artifactId>forgerock-audit-handler-jms</artifactId>
+        <version>${forgerock-commons.version}</version>
+      </dependency>
+
       <!-- ForgeRock User Self-Service dependencies -->
       <dependency>
         <groupId>jp.openam.commons</groupId>
