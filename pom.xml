@@ -12,19 +12,20 @@
    Header, with the fields enclosed by brackets [] replaced by your own identifying
    information: "Portions copyright [year] [name of copyright owner]".
 
-    Copyright 2015 ForgeRock AS.
+   Copyright 2015 ForgeRock AS.
+   Portions Copyrighted 2019 Open Source Solution Technology Corporation
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>org.forgerock.commons</groupId>
+  <groupId>jp.openam.commons</groupId>
   <artifactId>forgerock-bom</artifactId>
-  <version>4.1.1</version>
+  <version>4.1.2-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>ForgeRock Bill Of Materials</name>
   <description>Common BOM for ForgeRock projects.
     Provides a list of shared and third party dependencies
     which are known to be compatible with each other.</description>
-  <url>http://www.forgerock.com</url>
+  <url>https://github.com/openam-jp/forgerock-bom</url>
 
   <licenses>
     <license>
@@ -36,63 +37,18 @@
   </licenses>
 
   <issueManagement>
-    <system>jira</system>
-    <url>https://bugster.forgerock.org</url>
+    <system>GitHub</system>
+    <url>https://github.com/openam-jp/forgerock-bom/issues</url>
   </issueManagement>
 
   <scm>
-    <connection>scm:git:ssh://git@stash.forgerock.org:7999/commons/forgerock-bom.git</connection>
-    <developerConnection>scm:git:ssh://git@stash.forgerock.org:7999/commons/forgerock-bom.git</developerConnection>
-    <url>http://stash.forgerock.org/projects/COMMONS/repos/forgerock-bom/browse</url>
+    <connection>scm:git:https://github.com/openam-jp/forgerock-bom.git</connection>
+    <developerConnection>scm:git:git@github.com:openam-jp/forgerock-bom.git</developerConnection>
+    <url>https://github.com/openam-jp/forgerock-bom</url>
   </scm>
-
-  <distributionManagement>
-    <snapshotRepository>
-      <id>forgerock-snapshots</id>
-      <name>ForgeRock Snapshot Repository</name>
-      <url>${forgerockDistMgmtSnapshotsUrl}</url>
-    </snapshotRepository>
-
-    <repository>
-      <id>forgerock-staging</id>
-      <name>ForgeRock Release Repository</name>
-      <url>${forgerockDistMgmtReleasesUrl}</url>
-    </repository>
-  </distributionManagement>
-
-  <!-- (see FAQ at http://maven.apache.org/guides/mini/guide-central-repository-upload.html ) -->
-  <repositories>
-    <repository>
-      <id>forgerock-staging-repository</id>
-      <name>ForgeRock Release Repository</name>
-      <url>${forgerockDistMgmtReleasesUrl}</url>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-    </repository>
-
-    <repository>
-      <id>forgerock-snapshots-repository</id>
-      <name>ForgeRock Snapshot Repository</name>
-      <url>${forgerockDistMgmtSnapshotsUrl}</url>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-      <releases>
-        <enabled>false</enabled>
-      </releases>
-    </repository>
-  </repositories>
 
   <properties>
     <maven.min.version>3.0.1</maven.min.version>
-
-    <!-- Repository Deployment URLs -->
-    <forgerockDistMgmtSnapshotsUrl>http://maven.forgerock.org/repo/snapshots</forgerockDistMgmtSnapshotsUrl>
-    <forgerockDistMgmtReleasesUrl>http://maven.forgerock.org/repo/releases</forgerockDistMgmtReleasesUrl>
 
     <!-- Third party components versions -->
     <assertj.version>2.1.0</assertj.version>
@@ -104,18 +60,8 @@
     <testng.version>6.9.4</testng.version>
 
     <!-- Shared components versions -->
-    <forgerock-guava.version>18.0.3</forgerock-guava.version>
-    <forgerock-util.version>3.0.2</forgerock-util.version>
-    <json-crypto.version>3.0.2</json-crypto.version>
-    <json-patch.version>3.0.2</json-patch.version>
-    <json-ref.version>3.0.2</json-ref.version>
-    <json-schema.version>3.0.2</json-schema.version>
-    <json-web-token.version>3.0.2</json-web-token.version>
-    <forgerock-http-framework.version>3.0.1</forgerock-http-framework.version>
-    <forgerock-rest.version>4.0.3</forgerock-rest.version>
-    <forgerock-auth-filters.version>3.1.5</forgerock-auth-filters.version>
-    <forgerock-audit.version>4.1.1</forgerock-audit.version>
-    <forgerock-selfservice.version>1.0.3</forgerock-selfservice.version>
+    <forgerock-commons.version>20.1.1-SNAPSHOT</forgerock-commons.version>
+    <forgerock-guava.version>18.0.5-SNAPSHOT</forgerock-guava.version>
   </properties>
 
   <prerequisites>
@@ -247,316 +193,328 @@
 
       <!-- ForgeRock Guava dependency -->
       <dependency>
-        <groupId>org.forgerock.commons.guava</groupId>
+        <groupId>jp.openam.commons.guava</groupId>
         <artifactId>forgerock-guava</artifactId>
         <version>${forgerock-guava.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.forgerock.commons.guava</groupId>
+        <groupId>jp.openam.commons.guava</groupId>
         <artifactId>forgerock-guava-all</artifactId>
         <version>${forgerock-guava.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.forgerock.commons.guava</groupId>
+        <groupId>jp.openam.commons.guava</groupId>
         <artifactId>forgerock-guava-annotations</artifactId>
         <version>${forgerock-guava.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.forgerock.commons.guava</groupId>
+        <groupId>jp.openam.commons.guava</groupId>
         <artifactId>forgerock-guava-base</artifactId>
         <version>${forgerock-guava.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.forgerock.commons.guava</groupId>
+        <groupId>jp.openam.commons.guava</groupId>
         <artifactId>forgerock-guava-cache</artifactId>
         <version>${forgerock-guava.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.forgerock.commons.guava</groupId>
+        <groupId>jp.openam.commons.guava</groupId>
         <artifactId>forgerock-guava-collect</artifactId>
         <version>${forgerock-guava.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.forgerock.commons.guava</groupId>
+        <groupId>jp.openam.commons.guava</groupId>
         <artifactId>forgerock-guava-concurrent</artifactId>
         <version>${forgerock-guava.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.forgerock.commons.guava</groupId>
+        <groupId>jp.openam.commons.guava</groupId>
         <artifactId>forgerock-guava-escape</artifactId>
         <version>${forgerock-guava.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.forgerock.commons.guava</groupId>
+        <groupId>jp.openam.commons.guava</groupId>
         <artifactId>forgerock-guava-eventbus</artifactId>
         <version>${forgerock-guava.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.forgerock.commons.guava</groupId>
+        <groupId>jp.openam.commons.guava</groupId>
         <artifactId>forgerock-guava-hash</artifactId>
         <version>${forgerock-guava.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.forgerock.commons.guava</groupId>
+        <groupId>jp.openam.commons.guava</groupId>
         <artifactId>forgerock-guava-io</artifactId>
         <version>${forgerock-guava.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.forgerock.commons.guava</groupId>
+        <groupId>jp.openam.commons.guava</groupId>
         <artifactId>forgerock-guava-math</artifactId>
         <version>${forgerock-guava.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.forgerock.commons.guava</groupId>
+        <groupId>jp.openam.commons.guava</groupId>
         <artifactId>forgerock-guava-net</artifactId>
         <version>${forgerock-guava.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.forgerock.commons.guava</groupId>
+        <groupId>jp.openam.commons.guava</groupId>
         <artifactId>forgerock-guava-primitives</artifactId>
         <version>${forgerock-guava.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.forgerock.commons.guava</groupId>
+        <groupId>jp.openam.commons.guava</groupId>
         <artifactId>forgerock-guava-reflect</artifactId>
         <version>${forgerock-guava.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.forgerock.commons.guava</groupId>
+        <groupId>jp.openam.commons.guava</groupId>
         <artifactId>forgerock-guava-xml</artifactId>
         <version>${forgerock-guava.version}</version>
       </dependency>
 
       <!-- ForgeRock Util dependencies -->
       <dependency>
-        <groupId>org.forgerock.commons</groupId>
+        <groupId>jp.openam.commons</groupId>
         <artifactId>forgerock-util</artifactId>
-        <version>${forgerock-util.version}</version>
+        <version>${forgerock-commons.version}</version>
       </dependency>
 
       <dependency>
-        <groupId>org.forgerock.commons</groupId>
+        <groupId>jp.openam.commons</groupId>
         <artifactId>forgerock-test-utils</artifactId>
-        <version>${forgerock-util.version}</version>
+        <version>${forgerock-commons.version}</version>
       </dependency>
 
 
       <!-- ForgeRock HTTP Framework dependencies -->
       <dependency>
-        <groupId>org.forgerock.http</groupId>
+        <groupId>jp.openam.http</groupId>
         <artifactId>chf-client-apache-async</artifactId>
-        <version>${forgerock-http-framework.version}</version>
+        <version>${forgerock-commons.version}</version>
       </dependency>
 
       <dependency>
-        <groupId>org.forgerock.http</groupId>
+        <groupId>jp.openam.http</groupId>
         <artifactId>chf-client-apache-common</artifactId>
-        <version>${forgerock-http-framework.version}</version>
+        <version>${forgerock-commons.version}</version>
       </dependency>
 
       <dependency>
-        <groupId>org.forgerock.http</groupId>
+        <groupId>jp.openam.http</groupId>
         <artifactId>chf-client-apache-sync</artifactId>
-        <version>${forgerock-http-framework.version}</version>
+        <version>${forgerock-commons.version}</version>
       </dependency>
 
       <dependency>
-        <groupId>org.forgerock.http</groupId>
+        <groupId>jp.openam.http</groupId>
         <artifactId>chf-http-core</artifactId>
-        <version>${forgerock-http-framework.version}</version>
+        <version>${forgerock-commons.version}</version>
       </dependency>
 
       <dependency>
-        <groupId>org.forgerock.http</groupId>
+        <groupId>jp.openam.http</groupId>
         <artifactId>chf-http-servlet</artifactId>
-        <version>${forgerock-http-framework.version}</version>
+        <version>${forgerock-commons.version}</version>
       </dependency>
 
       <!-- ForgeRock json-* dependencies -->
       <dependency>
-        <groupId>org.forgerock.commons</groupId>
+        <groupId>jp.openam.commons</groupId>
         <artifactId>json-crypto-core</artifactId>
-        <version>${json-crypto.version}</version>
+        <version>${forgerock-commons.version}</version>
       </dependency>
 
       <dependency>
-        <groupId>org.forgerock.commons</groupId>
+        <groupId>jp.openam.commons</groupId>
         <artifactId>json-crypto-cli</artifactId>
-        <version>${json-crypto.version}</version>
+        <version>${forgerock-commons.version}</version>
       </dependency>
 
       <dependency>
-        <groupId>org.forgerock.commons</groupId>
+        <groupId>jp.openam.commons</groupId>
         <artifactId>json-patch</artifactId>
-        <version>${json-patch.version}</version>
+        <version>${forgerock-commons.version}</version>
       </dependency>
 
       <dependency>
-        <groupId>org.forgerock.commons</groupId>
+        <groupId>jp.openam.commons</groupId>
         <artifactId>json-ref-core</artifactId>
-        <version>${json-ref.version}</version>
+        <version>${forgerock-commons.version}</version>
       </dependency>
 
       <dependency>
-        <groupId>org.forgerock.commons</groupId>
+        <groupId>jp.openam.commons</groupId>
         <artifactId>json-ref-jackson</artifactId>
-        <version>${json-ref.version}</version>
+        <version>${forgerock-commons.version}</version>
       </dependency>
 
       <dependency>
-        <groupId>org.forgerock.commons</groupId>
+        <groupId>jp.openam.commons</groupId>
         <artifactId>json-schema-core</artifactId>
-        <version>${json-schema.version}</version>
+        <version>${forgerock-commons.version}</version>
       </dependency>
 
       <dependency>
-        <groupId>org.forgerock.commons</groupId>
+        <groupId>jp.openam.commons</groupId>
         <artifactId>json-schema-cli</artifactId>
-        <version>${json-schema.version}</version>
+        <version>${forgerock-commons.version}</version>
       </dependency>
 
       <dependency>
-        <groupId>org.forgerock.commons</groupId>
+        <groupId>jp.openam.commons</groupId>
         <artifactId>json-web-token</artifactId>
-        <version>${json-web-token.version}</version>
+        <version>${forgerock-commons.version}</version>
       </dependency>
 
       <!-- ForgeRock REST dependencies -->
       <dependency>
-        <groupId>org.forgerock.commons</groupId>
+        <groupId>jp.openam.commons</groupId>
         <artifactId>json-resource-descriptor</artifactId>
-        <version>${forgerock-rest.version}</version>
+        <version>${forgerock-commons.version}</version>
       </dependency>
 
       <dependency>
-        <groupId>org.forgerock.commons</groupId>
+        <groupId>jp.openam.commons</groupId>
         <artifactId>json-resource</artifactId>
-        <version>${forgerock-rest.version}</version>
+        <version>${forgerock-commons.version}</version>
       </dependency>
 
       <dependency>
-        <groupId>org.forgerock.commons</groupId>
+        <groupId>jp.openam.commons</groupId>
         <artifactId>json-resource</artifactId>
         <type>test-jar</type>
-        <version>${forgerock-rest.version}</version>
+        <version>${forgerock-commons.version}</version>
       </dependency>
 
       <dependency>
-        <groupId>org.forgerock.commons</groupId>
+        <groupId>jp.openam.commons</groupId>
         <artifactId>json-resource-http</artifactId>
-        <version>${forgerock-rest.version}</version>
+        <version>${forgerock-commons.version}</version>
       </dependency>
 
       <dependency>
-        <groupId>org.forgerock.commons</groupId>
+        <groupId>jp.openam.commons</groupId>
         <artifactId>json-resource-examples</artifactId>
-        <version>${forgerock-rest.version}</version>
+        <version>${forgerock-commons.version}</version>
       </dependency>
 
 
       <!-- ForgeRock Auth filters dependencies -->
       <dependency>
-        <groupId>org.forgerock.commons</groupId>
+        <groupId>jp.openam.commons</groupId>
         <artifactId>forgerock-jaspi-iwa-module</artifactId>
-        <version>${forgerock-auth-filters.version}</version>
+        <version>${forgerock-commons.version}</version>
       </dependency>
 
       <dependency>
-        <groupId>org.forgerock.commons</groupId>
+        <groupId>jp.openam.commons</groupId>
         <artifactId>forgerock-jaspi-jwt-session-module</artifactId>
-        <version>${forgerock-auth-filters.version}</version>
+        <version>${forgerock-commons.version}</version>
       </dependency>
 
       <dependency>
-        <groupId>org.forgerock.commons</groupId>
+        <groupId>jp.openam.commons</groupId>
         <artifactId>forgerock-jaspi-openam-session-module</artifactId>
-        <version>${forgerock-auth-filters.version}</version>
+        <version>${forgerock-commons.version}</version>
       </dependency>
 
       <dependency>
-        <groupId>org.forgerock.commons</groupId>
+        <groupId>jp.openam.commons</groupId>
         <artifactId>forgerock-jaspi-openid-connect-module</artifactId>
-        <version>${forgerock-auth-filters.version}</version>
+        <version>${forgerock-commons.version}</version>
       </dependency>
 
       <dependency>
-        <groupId>org.forgerock.commons</groupId>
+        <groupId>jp.openam.commons</groupId>
         <artifactId>forgerock-jaspi-runtime</artifactId>
-        <version>${forgerock-auth-filters.version}</version>
+        <version>${forgerock-commons.version}</version>
       </dependency>
 
       <dependency>
-        <groupId>org.forgerock.commons</groupId>
+        <groupId>jp.openam.commons</groupId>
         <artifactId>authz-framework</artifactId>
-        <version>${forgerock-auth-filters.version}</version>
+        <version>${forgerock-commons.version}</version>
       </dependency>
 
       <dependency>
-        <groupId>org.forgerock.commons</groupId>
+        <groupId>jp.openam.commons</groupId>
         <artifactId>authz-framework-api</artifactId>
-        <version>${forgerock-auth-filters.version}</version>
+        <version>${forgerock-commons.version}</version>
       </dependency>
 
       <dependency>
-        <groupId>org.forgerock.commons</groupId>
+        <groupId>jp.openam.commons</groupId>
         <artifactId>forgerock-authz-oauth2-module</artifactId>
-        <version>${forgerock-auth-filters.version}</version>
+        <version>${forgerock-commons.version}</version>
       </dependency>
 
       <dependency>
-        <groupId>org.forgerock.commons</groupId>
+        <groupId>jp.openam.commons</groupId>
         <artifactId>forgerock-authz-oauth2-restlet</artifactId>
-        <version>${forgerock-auth-filters.version}</version>
+        <version>${forgerock-commons.version}</version>
       </dependency>
 
       <!-- ForgeRock Audit dependencies -->
       <dependency>
-        <groupId>org.forgerock.commons</groupId>
+        <groupId>jp.openam.commons</groupId>
         <artifactId>forgerock-audit-core</artifactId>
-        <version>${forgerock-audit.version}</version>
+        <version>${forgerock-commons.version}</version>
       </dependency>
 
       <dependency>
-        <groupId>org.forgerock.commons</groupId>
+        <groupId>jp.openam.commons</groupId>
         <artifactId>forgerock-audit-json</artifactId>
-        <version>${forgerock-audit.version}</version>
+        <version>${forgerock-commons.version}</version>
       </dependency>
 
       <dependency>
-        <groupId>org.forgerock.commons</groupId>
+        <groupId>jp.openam.commons</groupId>
         <artifactId>forgerock-audit-handler-csv</artifactId>
-        <version>${forgerock-audit.version}</version>
+        <version>${forgerock-commons.version}</version>
       </dependency>
 
       <dependency>
-        <groupId>org.forgerock.commons</groupId>
+        <groupId>jp.openam.commons</groupId>
         <artifactId>forgerock-audit-handler-syslog</artifactId>
-        <version>${forgerock-audit.version}</version>
+        <version>${forgerock-commons.version}</version>
       </dependency>
 
       <dependency>
-        <groupId>org.forgerock.commons</groupId>
+        <groupId>jp.openam.commons</groupId>
         <artifactId>forgerock-audit-handler-jdbc</artifactId>
-        <version>${forgerock-audit.version}</version>
+        <version>${forgerock-commons.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>jp.openam.commons</groupId>
+        <artifactId>forgerock-audit-handler-elasticsearch</artifactId>
+        <version>${forgerock-commons.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>jp.openam.commons</groupId>
+        <artifactId>forgerock-audit-handler-jms</artifactId>
+        <version>${forgerock-commons.version}</version>
       </dependency>
 
       <!-- ForgeRock User Self-Service dependencies -->
       <dependency>
-        <groupId>org.forgerock.commons</groupId>
+        <groupId>jp.openam.commons</groupId>
         <artifactId>forgerock-selfservice-core</artifactId>
-        <version>${forgerock-selfservice.version}</version>
+        <version>${forgerock-commons.version}</version>
       </dependency>
 
       <dependency>
-        <groupId>org.forgerock.commons</groupId>
+        <groupId>jp.openam.commons</groupId>
         <artifactId>forgerock-selfservice-stages</artifactId>
-        <version>${forgerock-selfservice.version}</version>
+        <version>${forgerock-commons.version}</version>
       </dependency>
 
       <dependency>
-        <groupId>org.forgerock.commons</groupId>
+        <groupId>jp.openam.commons</groupId>
         <artifactId>forgerock-selfservice-json</artifactId>
-        <version>${forgerock-selfservice.version}</version>
+        <version>${forgerock-commons.version}</version>
       </dependency>
 
       <dependency>
