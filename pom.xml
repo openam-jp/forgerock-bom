@@ -1080,11 +1080,6 @@
         <version>${jersey-bundle.version}</version>
       </dependency>
       <dependency>
-        <groupId>com.iplanet.jato</groupId>
-        <artifactId>jato</artifactId>
-        <version>${jato.version}</version>
-      </dependency>
-      <dependency>
         <groupId>javax.ws.rs</groupId>
         <artifactId>jsr311-api</artifactId>
         <version>${jsr311-api.version}</version>
