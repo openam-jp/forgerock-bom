@@ -61,8 +61,8 @@
     <!-- Third party components versions -->
     <assertj.version>2.1.0</assertj.version>
     <fest-assert.version>1.4</fest-assert.version>
-    <jackson.version>2.9.9</jackson.version>
-    <jackson-databind.version>2.9.9.3</jackson-databind.version>
+    <jackson.version>2.9.7</jackson.version>
+    <jackson-databind.version>${jackson.version}</jackson-databind.version>
     <mockito.version>1.10.19</mockito.version>
     <servlet-api.version>3.1.0</servlet-api.version>
     <slf4j.version>1.7.12</slf4j.version>
@@ -1083,77 +1083,6 @@
         <groupId>com.iplanet.jato</groupId>
         <artifactId>jato</artifactId>
         <version>${jato.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.sun.web.ui</groupId>
-        <artifactId>cc</artifactId>
-        <version>${cc-ui.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.sun.web.ui</groupId>
-        <artifactId>cc_de</artifactId>
-        <version>${cc-ui.version}</version>
-        <scope>runtime</scope>
-      </dependency>
-      <dependency>
-        <groupId>com.sun.web.ui</groupId>
-        <artifactId>cc_es</artifactId>
-        <version>${cc-ui.version}</version>
-        <scope>runtime</scope>
-      </dependency>
-      <dependency>
-        <groupId>com.sun.web.ui</groupId>
-        <artifactId>cc_fr</artifactId>
-        <version>${cc-ui.version}</version>
-        <scope>runtime</scope>
-      </dependency>
-      <dependency>
-        <groupId>com.sun.web.ui</groupId>
-        <artifactId>cc_it</artifactId>
-        <version>${cc-ui.version}</version>
-        <scope>runtime</scope>
-      </dependency>
-      <dependency>
-        <groupId>com.sun.web.ui</groupId>
-        <artifactId>cc_ja</artifactId>
-        <version>${cc-ui.version}</version>
-        <scope>runtime</scope>
-      </dependency>
-      <dependency>
-        <groupId>com.sun.web.ui</groupId>
-        <artifactId>cc_ko</artifactId>
-        <version>${cc-ui.version}</version>
-        <scope>runtime</scope>
-      </dependency>
-      <dependency>
-        <groupId>com.sun.web.ui</groupId>
-        <artifactId>cc_sv</artifactId>
-        <version>${cc-ui.version}</version>
-        <scope>runtime</scope>
-      </dependency>
-      <dependency>
-        <groupId>com.sun.web.ui</groupId>
-        <artifactId>cc_zh</artifactId>
-        <version>${cc-ui.version}</version>
-        <scope>runtime</scope>
-      </dependency>
-      <dependency>
-        <groupId>com.sun.web.ui</groupId>
-        <artifactId>cc_zh_CN</artifactId>
-        <version>${cc-ui.version}</version>
-        <scope>runtime</scope>
-      </dependency>
-      <dependency>
-        <groupId>com.sun.web.ui</groupId>
-        <artifactId>cc_zh_HK</artifactId>
-        <version>${cc-ui.version}</version>
-        <scope>runtime</scope>
-      </dependency>
-      <dependency>
-        <groupId>com.sun.web.ui</groupId>
-        <artifactId>cc_zh_TW</artifactId>
-        <version>${cc-ui.version}</version>
-        <scope>runtime</scope>
       </dependency>
       <dependency>
         <groupId>javax.ws.rs</groupId>
