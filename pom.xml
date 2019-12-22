@@ -63,8 +63,8 @@
     <testng.version>6.14.3</testng.version>
 
     <!-- Shared components versions -->
-    <forgerock-commons.version>20.1.1-SNAPSHOT</forgerock-commons.version>
-    <forgerock-guava.version>18.0.5-SNAPSHOT</forgerock-guava.version>
+    <forgerock-commons.version>20.1.1</forgerock-commons.version>
+    <forgerock-guava.version>18.0.5</forgerock-guava.version>
     
     <!-- i18n-framework -->
     <maven-project.version>3.0-alpha-2</maven-project.version>
