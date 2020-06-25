@@ -55,7 +55,7 @@
     <!-- Third party components versions -->
     <assertj.version>3.13.2</assertj.version>
     <fest-assert.version>1.4</fest-assert.version>
-    <jackson.version>2.9.7</jackson.version>
+    <jackson.version>2.10.4</jackson.version>
     <jackson-databind.version>${jackson.version}</jackson-databind.version>
     <mockito.version>2.28.2</mockito.version>
     <servlet-api.version>3.1.0</servlet-api.version>
