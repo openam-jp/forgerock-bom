@@ -98,7 +98,7 @@
     <apache-rhino.version>1.7R4_1</apache-rhino.version>
     <args4j.version>2.0.16</args4j.version>
     <json-simple.version>1.1</json-simple.version>
-    <javax-mail.version>1.5.1</javax-mail.version>
+    <jakarta-mail.version>1.6.5</jakarta-mail.version>
     <commons-lang3.version>3.4</commons-lang3.version>
     <osgi-wrapped-rhino.version>1.7R4</osgi-wrapped-rhino.version>
 
@@ -788,8 +788,8 @@
       </dependency>
       <dependency>
         <groupId>com.sun.mail</groupId>
-        <artifactId>javax.mail</artifactId>
-        <version>${javax-mail.version}</version>
+        <artifactId>jakarta.mail</artifactId>
+        <version>${jakarta-mail.version}</version>
       </dependency>
       <dependency>
         <groupId>org.apache.commons</groupId>
@@ -1149,6 +1149,12 @@
         <groupId>javax.xml.soap</groupId>
         <artifactId>saaj-api</artifactId>
         <version>${saaj-api.version}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>javax.activation</groupId>
+            <artifactId>activation</artifactId>
+          </exclusion>
+        </exclusions>
       </dependency>
       <dependency>
         <groupId>com.sun.xml.messaging.saaj</groupId>
