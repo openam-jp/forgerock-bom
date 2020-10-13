@@ -103,7 +103,7 @@
     <osgi-wrapped-rhino.version>1.7R4</osgi-wrapped-rhino.version>
 
     <!-- persistit -->
-    <junit.version>4.12</junit.version>
+    <junit.version>4.13.1</junit.version>
 
     <!-- bloomfiltet -->
     <hdrhistogram.version>2.1.4</hdrhistogram.version>
