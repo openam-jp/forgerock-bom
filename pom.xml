@@ -90,7 +90,7 @@
     <rest-assured.version>2.3.0</rest-assured.version>
     <restito.version>0.9.3</restito.version>
     <jmh.version>1.12</jmh.version>
-    <apache-httpclient.version>4.4.1</apache-httpclient.version>
+    <apache-httpclient.version>4.5.13</apache-httpclient.version>
     <grizzly.version>2.3.24</grizzly.version>
     <jetty.version>8.1.15.v20140411</jetty.version>
     <commons-codec.version>1.6</commons-codec.version>
