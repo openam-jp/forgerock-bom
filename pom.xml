@@ -92,7 +92,7 @@
     <jmh.version>1.12</jmh.version>
     <apache-httpclient.version>4.4.1</apache-httpclient.version>
     <grizzly.version>2.3.24</grizzly.version>
-    <jetty.version>8.1.15.v20140411</jetty.version>
+    <jetty.version>10.0.10</jetty.version>
     <commons-codec.version>1.6</commons-codec.version>
     <commons-cli.version>1.2</commons-cli.version>
     <apache-rhino.version>1.7R4_1</apache-rhino.version>
