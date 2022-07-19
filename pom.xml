@@ -13,7 +13,7 @@
    information: "Portions copyright [year] [name of copyright owner]".
 
    Copyright 2015 ForgeRock AS.
-   Portions Copyrighted 2019-2020 Open Source Solution Technology Corporation
+   Portions Copyrighted 2019-2022 OSSTech Corporation
    Portions Copyrighted 2019 OGIS-RI Co., Ltd.
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -48,6 +48,14 @@
     <developerConnection>scm:git:git@github.com:openam-jp/forgerock-bom.git</developerConnection>
     <url>https://github.com/openam-jp/forgerock-bom</url>
   </scm>
+
+  <distributionManagement>
+    <repository>
+      <id>github</id>
+      <name>GitHub Packages</name>
+      <url>https://maven.pkg.github.com/openam-jp/forgerock-bom</url>
+    </repository>
+  </distributionManagement>
 
   <properties>
     <maven.min.version>3.0.1</maven.min.version>
