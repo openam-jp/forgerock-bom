@@ -159,6 +159,7 @@
     <activemq.version>5.13.3</activemq.version>
     <logback.version>1.1.3</logback.version>
     <cxf.version>2.7.18</cxf.version>
+    <bouncycastle.version>1.84</bouncycastle.version>
 
   </properties>
 
@@ -1439,6 +1440,11 @@
             <artifactId>jaxb-api</artifactId>
           </exclusion>
         </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>org.bouncycastle</groupId>
+        <artifactId>bcpkix-jdk18on</artifactId>
+        <version>${bouncycastle.version}</version>
       </dependency>
 
     </dependencies>
